@@ -1,4 +1,4 @@
-package com.enigma.migrationhelper
+package com.enigma.migrationhelper.db
 
 import android.database.Cursor
 import androidx.sqlite.db.SupportSQLiteDatabase
