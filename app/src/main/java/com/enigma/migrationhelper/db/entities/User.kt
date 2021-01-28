@@ -10,4 +10,5 @@ data class User(
     @ColumnInfo(name = "first_name") val firstName: String?,
     @ColumnInfo(name = "last_name") val lastName: String?,
     @ColumnInfo(name = "icon") val icon: String?,
+    @ColumnInfo(name = "phone_number") val phoneNumber: String?
 )

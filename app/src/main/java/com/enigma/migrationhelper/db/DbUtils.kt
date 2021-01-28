@@ -55,7 +55,9 @@ fun SupportSQLiteDatabase.alterTable(
         }
 
     val indices = query("PRAGMA index_list(\"${tableName}\")").use { cursor ->
-        cursor.moveToFirst()
+        if (!cursor.moveToFirst()) {
+            return@use emptyList()
+        }
         val indexes = mutableSetOf<IndexData>()
         do {
             val indexName = cursor.getString(cursor.getColumnIndex("name"))
